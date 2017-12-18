@@ -6,7 +6,7 @@
            :class="{'input': true, 'is-danger': errors.has('email') }" type="text" placeholder="Email">
     <span v-show="errors.has('email')" class="help is-danger">{{ errors.first('email') }}</span>
     <br/>
-    <div style="display:block;margin-top:30px">{{errors}}</div>
+    <pre style="display:block;margin-top:30px;text-align:left">{{errors}}</pre>
   </div>
 </template>
 
