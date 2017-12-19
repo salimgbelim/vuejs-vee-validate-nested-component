@@ -2,7 +2,7 @@
   <div class="column text-component-column">
     <span style="display:block"><strong>This is a TextBox component</strong></span>
     <label class="label">Name</label>
-    <input name="name" v-model="name" v-validate="'required|valid_name'"
+    <input name="name" v-model="name" v-validate="'required|non_numeric_field'" data-vv-validate-on="none"
            :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
     <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
   </div>

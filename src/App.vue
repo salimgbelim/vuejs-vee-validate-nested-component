@@ -8,6 +8,8 @@
 
 <script>
   import SimpleComponent from './components/SimpleComponent.vue';
+  import SimpleValidation from './components/vuelidate/SimpleValidation';
+
 
   export default {
     name: 'app',
