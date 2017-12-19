@@ -1,6 +1,6 @@
 <template>
-  <div class="column text-component-column">
-    <span style="display:block"><strong>This is a Text component</strong></span>
+  <div class="column email-component-column">
+    <span style="display:block"><strong>This is a Email component</strong></span>
     <label class="label">Email</label>
     <input name="email"  v-validate="'required|email'"
            :class="{'input': true, 'is-danger': errors.has('email') }" type="text" placeholder="Email">
@@ -12,7 +12,7 @@
 
 <script>
   export default {
-    name: 'TextComponent',
+    name: 'EmailComponent',
     inject: ['$validator'],
     data: () => ({
       email: ''
@@ -21,9 +21,6 @@
 </script>
 
 <style>
-  .text-component {
-    width: 50%;
-  }
 
   .label {
     float: left;
@@ -37,7 +34,7 @@
     float: left;
   }
 
-  .text-component-column {
+  .email-component-column {
     border: 1px solid red;
     padding: 20px;
   }

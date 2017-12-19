@@ -1,16 +1,11 @@
 <template>
   <div class="simple-component">
-    <text-component></text-component>
+    <email-component></email-component>
+    <textbox-component></textbox-component>
 
     <div class=" parent-component">
       <span style="display:block"><strong>This is a Parent component</strong></span>
 
-      <div class="column">
-        <label class="label">Name</label>
-        <input name="name" v-model="name" v-validate="'required|alpha'"
-               :class="{'input': true, 'is-danger': errors.has('name') }" type="text" placeholder="Name">
-        <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
-      </div>
       <div class="column">
         <label class="label">Phone</label>
         <input name="phone" v-model="phone" v-validate="'required|numeric'"
@@ -34,7 +29,8 @@
 </template>
 
 <script>
-  import TextComponent from './TextComponent';
+  import EmailComponent from './EmailComponent';
+  import TextboxComponent from './TextBoxComponent';
 
 
   export default {
@@ -55,7 +51,8 @@
       }
     },
     components: {
-      TextComponent
+      EmailComponent,
+      TextboxComponent
     }
   };
 </script>
@@ -83,6 +80,6 @@
 
   .parent-component {
     border: 1px solid blue;
-    margin-top:10px;
+    margin-top: 10px;
   }
 </style>

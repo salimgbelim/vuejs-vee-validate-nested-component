@@ -16,11 +16,19 @@ const dictionary = {
         required: 'Your email is empty' // messages can be strings as well.
       },
       name: {
-        required: 'Your name is empty'
+        required: 'Please let us know your first name'
       }
     }
   }
 };
+
+VeeValidate.Validator.extend('valid_name', {
+  getMessage: () => 'Please enter a non numeric valid name',
+  validate: (value) => {
+    const strongRegex = new RegExp('([a-zA-Z][a-zA-Z- \']*?[a-zA-Z])$|([a-zA-Z])$');
+    return strongRegex.test(value);
+  }
+});
 
 Vue.use(VeeValidate, {
   dictionary
