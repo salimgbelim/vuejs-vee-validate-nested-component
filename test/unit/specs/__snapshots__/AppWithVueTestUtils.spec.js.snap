@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.test js with vue test utils and jest has the expected html structure 1`] = `
+<div
+  class="container"
+  id="app"
+>
+  <!---->
+</div>
+`;
