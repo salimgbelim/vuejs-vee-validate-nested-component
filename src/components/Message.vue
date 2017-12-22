@@ -1,5 +1,10 @@
 <template>
-  <li class="message" style="margin-top:10px;">{{message}} -- {{ author }}</li>
+  <li
+    class="message"
+    style="margin-top:10px;"
+    @click="handleClick">
+    {{message}} -- {{ author }}
+  </li>
 </template>
 
 <script>
@@ -14,6 +19,11 @@
       author: {
         type: String,
         default: 'Paco'
+      }
+    },
+    methods: {
+      handleClick() {
+        this.$emit('message-clicked', this.message);
       }
     }
   }

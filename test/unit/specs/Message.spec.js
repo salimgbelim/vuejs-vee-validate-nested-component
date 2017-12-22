@@ -58,6 +58,38 @@ describe('Message.test.js', () => {
 
     });
 
+    describe('Events', () => {
+
+      beforeEach(() => {
+        cmp = createCmp({message: 'Cat'});
+      });
+
+      it('calls handleClick when click on message', () => {
+        jest.spyOn(cmp.vm, 'handleClick');
+        cmp.update();
+
+        cmp.find('.message').trigger('click');
+        expect(cmp.vm.handleClick).toBeCalled();
+      });
+
+      it('calls handleClick when click on message with different way using jest.fn()', () => {
+        cmp.vm.handleClick = jest.fn();
+        cmp.update();
+
+        cmp.find('.message').trigger('click');
+        expect(cmp.vm.handleClick).toBeCalled();
+      });
+
+      it('calls handleClick using setMethods which is the preferred way', () => {
+        const stub = jest.fn();
+        cmp.setMethods({handleClick: stub});
+
+        cmp.find('.message').trigger('click');
+        expect(stub).toBeCalled();
+      });
+
+    });
+
   });
 
 });
