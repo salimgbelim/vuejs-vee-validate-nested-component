@@ -1,22 +1,38 @@
 <template>
   <div id="app" class="container">
-      <div class="columns is-multiline">
-        <simple-component></simple-component>
-      </div>
+    <!-- <div class="columns is-multiline">
+       <simple-component></simple-component>
+     </div>-->
+
+    <MessageList :messages="messages"></MessageList>
   </div>
 </template>
 
 <script>
-  import SimpleComponent from './components/SimpleComponent.vue';
-  import SimpleValidation from './components/vuelidate/SimpleValidation';
+  /* import SimpleComponent from './components/SimpleComponent.vue';
+   import SimpleValidation from './components/vuelidate/SimpleValidation';
 
+
+   export default {
+     name: 'app',
+     components: {
+       SimpleComponent
+     }
+   }*/
+
+  import MessageList from './components/MessageList';
 
   export default {
+
     name: 'app',
+    data: () => ({
+      messages: ['Hey john', 'Howdy Paco']
+    }),
     components: {
-      SimpleComponent
+      MessageList
     }
   }
+
 </script>
 
 <style>
