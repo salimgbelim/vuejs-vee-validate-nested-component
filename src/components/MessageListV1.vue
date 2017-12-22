@@ -1,7 +1,9 @@
 <template>
   <ul>
-    <message :message="message" v-for="message in messages">
-    </message>
+    <Message :message="message"
+             v-for="message in messages"
+             v-bind:key="message">
+    </Message>
   </ul>
 </template>
 

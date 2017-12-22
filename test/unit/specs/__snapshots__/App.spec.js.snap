@@ -6,10 +6,11 @@ exports[`App.test.js has the expected html structure 1`] = `
   id="app"
 >
   <ul>
-    <li>
-      
-    Cat
-  
+    <li
+      class="message"
+      style="margin-top: 10px;"
+    >
+      Cat -- Paco
     </li>
   </ul>
 </div>

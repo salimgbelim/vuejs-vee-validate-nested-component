@@ -4,7 +4,7 @@
        <simple-component></simple-component>
      </div>-->
 
-    <MessageList :messages="messages"></MessageList>
+    <MessageListV1 :messages="messages"></MessageListV1>
   </div>
 </template>
 
@@ -20,16 +20,16 @@
      }
    }*/
 
-  import MessageList from './components/MessageList';
+  import MessageListV1 from './components/MessageListV1';
 
   export default {
 
     name: 'app',
     data: () => ({
-      messages: ['Hey john', 'Howdy Paco']
+      messages: ['Hey john', 'Oi john']
     }),
     components: {
-      MessageList
+      MessageListV1
     }
   }
 

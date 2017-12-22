@@ -37,7 +37,7 @@ describe('MessageListV1.test.js', () => {
     expect(cmp.element).toMatchSnapshot();
   });
 
-  it('Both MessageList and Message are vue instances', function () {
+  it('Both MessageList and Message are vue instances', () => {
     expect(cmp.isVueInstance()).toBe(true);
     expect(cmp.find(Message).isVueInstance()).toBe(true);
   });
@@ -55,11 +55,15 @@ describe('MessageListV1.test.js', () => {
     expect(cmp.find(Message).element.getAttribute('class')).toEqual('message');
   });
 
-  it('Message component has the .message class', function () {
+  it('Message component has the .message class', () => {
     expect(cmp.find(Message).classes()).toContain('message');
   });
 
-  it('Message component has style padding-top: 10', () => {
+  it('Message component has style margin-top: 10', () => {
+    expect(cmp.find(Message).hasStyle('margin-top', '10px')).toBe(true);
+  });
+
+  test('Message component has style margin-top: 10', () => {
     expect(cmp.find(Message).hasStyle('margin-top', '10px')).toBe(true);
   });
 
