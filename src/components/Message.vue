@@ -1,9 +1,10 @@
 <template>
-  <li class="message">{{message}}</li>
+  <li class="message" style="margin-top:10px;">{{message}}</li>
 </template>
 
 <script>
   export default {
+    name : 'Message',
     props: ['message']
   }
 </script>
