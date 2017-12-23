@@ -6,5 +6,7 @@ exports[`App.test js with vue test utils and jest has the expected html structur
   id="app"
 >
   <!---->
+   
+  <!---->
 </div>
 `;

@@ -5,6 +5,7 @@
      </div>-->
 
     <MessageListV1 :messages="messages"></MessageListV1>
+    <Form v-bind:reversed="true"></Form>
   </div>
 </template>
 
@@ -21,6 +22,7 @@
    }*/
 
   import MessageListV1 from './components/MessageListV1';
+  import Form from './components/Form';
 
   export default {
 
@@ -29,7 +31,8 @@
       messages: ['Hey john', 'Oi john']
     }),
     components: {
-      MessageListV1
+      MessageListV1,
+      Form
     }
   }
 

@@ -15,5 +15,33 @@ exports[`App.test.js has the expected html structure 1`] = `
 
     </li>
   </ul>
+   
+  <div>
+    <br />
+     
+    <br />
+     
+    <br />
+     
+    <h1>
+      Some Form Elements
+    </h1>
+     
+    <br />
+     
+    <form
+      action=""
+    >
+      <input
+        type="text"
+      />
+       
+      <span
+        class="reversed"
+      >
+        
+      </span>
+    </form>
+  </div>
 </div>
 `;
