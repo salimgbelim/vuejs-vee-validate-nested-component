@@ -88,6 +88,16 @@ describe('Message.test.js', () => {
         expect(stub).toBeCalled();
       });
 
+      it('triggers a message-click event when a handleClick method is called', () => {
+        const stub = jest.fn();
+        cmp.vm.$on('message-clicked', stub);
+
+        cmp.vm.handleClick();
+
+        expect(stub).toBeCalledWith('Cat');
+
+      });
+
     });
 
   });

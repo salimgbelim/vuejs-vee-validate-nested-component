@@ -67,4 +67,22 @@ describe('MessageListV1.test.js', () => {
     expect(cmp.find(Message).hasStyle('margin-top', '10px')).toBe(true);
   });
 
+  it('Calls handleMessageClick when @message-click happens', () => {
+    const stub = jest.fn();
+    cmp.setMethods({handleMessageClick: stub});
+    cmp.update();
+
+    cmp.find(Message).vm.$emit('message-clicked', 'cat');
+    expect(stub).toBeCalledWith('cat');
+  });
+
+  it('logs the message when @message-click happens', () => {
+    const spy = jest.spyOn(console, 'log');
+
+    cmp.find(Message).vm.$emit('message-clicked', 'cat');
+
+    expect(spy).toBeCalledWith(expect.stringContaining('cat'));
+    spy.mockReset(); // or mockRestore() to completely remove the mock
+  });
+
 });
