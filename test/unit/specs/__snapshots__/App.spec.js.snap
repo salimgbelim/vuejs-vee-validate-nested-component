@@ -41,6 +41,10 @@ exports[`App.test.js has the expected html structure 1`] = `
       >
         
       </span>
+       
+      <button>
+        Click Me
+      </button>
     </form>
   </div>
 </div>
